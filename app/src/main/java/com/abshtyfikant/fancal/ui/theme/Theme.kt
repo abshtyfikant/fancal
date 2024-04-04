@@ -77,16 +77,10 @@ fun FancalTheme(
   useDarkTheme: Boolean = isSystemInDarkTheme(),
   dynamicColor: Boolean = false,
   content: @Composable() () -> Unit
-) {
-  val colors = if (!useDarkTheme) {
-    LightColors
-  } else {
-    DarkColors
-  }
-
+) { val colors = if (!useDarkTheme) { LightColors } else {
+    DarkColors }
   MaterialTheme(
     colorScheme = colors,
     content = content
-  )
-}
+  ) }
 
